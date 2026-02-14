@@ -1,3 +1,5 @@
-document.getElementById("myBtn").addEventListener("click", function() {
-    alert("Hello from External JS!");
+const letter = document.getElementById("letter");
+
+letter.addEventListener("click", () => {
+    letter.classList.toggle("open");
 });
