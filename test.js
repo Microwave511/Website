@@ -1,21 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function() {
 
-  const envelope = document.getElementById("envelope");
-  const btnOpen = document.getElementById("open");
-  const btnReset = document.getElementById("reset");
+    var envelope = $('#envelope');
+    var btn_open = $("#open");
+    var btn_reset = $("#reset");
 
-  function openEnvelope() {
-    envelope.classList.add("open");
-    envelope.classList.remove("close");
-  }
+    function openEnvelope() {
+        envelope.addClass("open").removeClass("close");
+    }
 
-  function closeEnvelope() {
-    envelope.classList.add("close");
-    envelope.classList.remove("open");
-  }
+    function closeEnvelope() {
+        envelope.addClass("close").removeClass("open");
+    }
 
-  envelope.addEventListener("click", openEnvelope);
-  btnOpen.addEventListener("click", openEnvelope);
-  btnReset.addEventListener("click", closeEnvelope);
+    envelope.click(openEnvelope);
+    btn_open.click(openEnvelope);
+    btn_reset.click(closeEnvelope);
 
 });
