@@ -1,5 +1,3 @@
-console.log("Script is alive 👋");
-
 $(document).ready(function() {
 
     var envelope = $('#envelope');
@@ -7,12 +5,10 @@ $(document).ready(function() {
     var btn_reset = $("#reset");
 
     function openEnvelope() {
-        console.log("Opened");
         envelope.addClass("open").removeClass("close");
     }
 
     function closeEnvelope() {
-        console.log("Closed");
         envelope.addClass("close").removeClass("open");
     }
 
